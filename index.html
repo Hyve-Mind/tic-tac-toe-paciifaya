@@ -1,0 +1,131 @@
+ines (103 sloc) 5.26 KB
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>TIC TAC TOE</title>
+</head>
+
+
+<body>
+
+
+  <div class="game-initializer">
+
+    <img src="./assets/xo.svg" alt="x and o logo">
+
+    <div class="player-picker">
+
+      <h3 class="game-initializer__heading">Pick Player 1's Sign</h3>
+
+      <div class="sign-selector">
+        <label for="sign-x" class="hide-label">Select x sign</label>
+        <input type="radio" name="select-sign" id="sign-x" class="game-initializer-select-x" checked>
+
+        <label for="sign-o" class="hide-label">Select o sign</label>
+        <input type="radio" name="select-sign" id="sign-o" class="game-initializer-select-o">
+
+        <div class="game-initializer-sign game-initializer-sign-x"></div>
+        <div class="game-initializer-sign game-initializer-sign-o"></div>
+      </div>
+
+      <p class="game-initializer-notice">Remember: X Goes First</p>
+
+    </div>
+
+    <div role="button" class="action-btn">Start Game</div>
+  </div>
+
+  <main class="disabled">
+
+    <div class="main-upper-section">
+
+      <img src="./assets/xo.svg" alt="x-o game logo">
+
+      <h2 data-field-turn="" class="player-turn-display">
+        <span class="get-turn-sign"></span>Turn
+      </h2>
+
+      <div role="button" class="restart-btn"></div>
+
+    </div>
+
+    <div class="main-game-board">
+      <div class="game-board__field" data-index="0" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="1" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="2" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="3" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="4" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="5" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="6" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="7" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+      <div class="game-board__field" data-index="8" role="button">
+        <div class="game-board__state" data-field-state='' data-field-turn=""></div>
+      </div>
+    </div>
+
+    <div class="main-summary-section">
+
+      <section class="main-summary">
+        <p class="display-name">Player X</p>
+        <h2 class="score-displayer">0</h2>
+      </section>
+
+      <section class="main-summary">
+        <p class="display-name">Ties</p>
+        <h2 class="score-displayer">0</h2>
+      </section>
+
+      <section class="main-summary">
+        <p class="display-name">Player O</p>
+        <h2 class="score-displayer">0</h2>
+      </section>
+
+    </div>
+
+  </main>
+
+  <div class="result-conveyer disabled">
+
+    <p class="result-conveyer__result">Congratulations !</p>
+    <h2 data-field-turn="" class="result-conveyer__brief">
+      <section class="result-conveyer__get-winner-sign"></section>
+      <section>Takes the Round</section>
+    </h2>
+
+    <section class="action-section">
+      <div role="button" class="result-conveyer__reset-btn">Quit</div>
+      <div role="button" class="result-conveyer__continue-btn">Next Round</div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
